@@ -1,0 +1,29 @@
+//Accept String from user and change a 1 character with 1 symbol
+
+#include<stdio.h>
+
+void Change(char str[])
+{
+    while(*str != '\0')
+    {
+        if(*str == 'a')
+        {
+          *str ='_'; 
+        }
+        str++;
+    }
+}
+
+int main()
+{
+    char Arr[50] = {'\0'};
+
+    printf("Enter String :\n");
+    scanf("%[^'\n']s",Arr);                   
+    
+    Change(Arr);
+
+    printf("Updated String is : %s\n",Arr);
+
+    return 0;
+}
